@@ -1,3 +1,5 @@
+package knthcm.basic;
+
 import java.util.Scanner; // Thu vien nhap du lieu
 // import java.util.*; Khai bao tat ca cac lop tu goi java.util
 
