@@ -92,7 +92,6 @@ public class BasicVariables {
             System.out.print("y = ");
             if (sc.hasNextDouble()) {
                 y = sc.nextDouble();
-                
                 break;
             } else {
                 System.out.println("Vui long nhap mot so.");

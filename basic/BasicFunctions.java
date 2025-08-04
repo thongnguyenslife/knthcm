@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Basic {
+public class BasicFunctions {
     static String svHoTen;
     static int svTuoi;
     static double svDiem;
