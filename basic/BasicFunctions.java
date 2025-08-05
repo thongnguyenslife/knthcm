@@ -3,117 +3,161 @@ package knthcm.basic;
 import java.util.Scanner;
 
 public class BasicFunctions {
+    static Scanner sc = new Scanner(System.in);
     static String svHoTen;
-    static int svTuoi;
-    static double svDiem;
+    static int svTuoi = -1;
+    static double svDiem = -1.0;
     static char svXepLoai;
     static boolean svTotNghiep;
     
-    public static String inputsvHoTen(Scanner sc) {
+    public static String inputSvHoTen(Scanner sc) {
         System.out.print("Ho ten: ");
         
         return sc.nextLine();
     }
     
-    public static int inputsvTuoi(Scanner sc) {
-        int input = -1;
-        
+    public static int inputSvTuoi(Scanner sc) {
         do {
             System.out.print("Tuoi: ");
             if (sc.hasNextInt()) {
-                input = sc.nextInt();
-                if (input <= 0) {
-                    System.out.println("Vui long nhap so nguyen duong");
+                svTuoi = sc.nextInt();
+                if (svTuoi <= 0) {
+                    System.out.println("Vui long nhap so nguyen duong.");
                 }
             } else {
-                System.out.println("Vui long nhap so nguyen");
+                System.out.println("Vui long nhap so.");
                 sc.next();
             }
-        } while (input <= 0);
+        } while (svTuoi <= 0);
         
-        return input;
+        return svTuoi;
     }
     
-    public static double inputsvDiem(Scanner sc) {
-        double input = -1.0;
-         
+    public static double inputSvDiem(Scanner sc) {
         do {
             System.out.print("Diem TB: ");
             if (sc.hasNextDouble()) {
-                input = sc.nextDouble();
-                if (input < 0) {
-                    System.out.println("Vui long nhap so duong hoac so 0");
+                svDiem = sc.nextDouble();
+                if (svDiem < 0.0) {
+                    System.out.println("Vui long nhap so duong hoac so 0.");
                 }
             } else {
-                System.out.println("Vui long nhap so");
+                System.out.println("Vui long nhap so.");
                 sc.next();
             }
-        } while (input < 0);
-    
-        return input;
+        } while (svDiem < 0.0);
+        
+        return svDiem;
     }
     
-    public static char inputsvXepLoai(Scanner sc) {
+    public static char inputSvXepLoai(Scanner sc) {
         String input = "";
-        
-        sc.nextLine(); // ← fix lỗi dư '\n'
+        sc.nextLine(); // fix loi \n
         
         do {
             System.out.print("Xep loai (A/B/C...): ");
-            if (sc.hasNextLine()) {
-                input = sc.nextLine();
-                if (input.length() != 1 || !((input.charAt(0) >= 'A' && input.charAt(0) <= 'Z') || (input.charAt(0) >= 'a' && input.charAt(0) <= 'z'))) {
-                    System.out.println("Vui long nhap 1 ky tu A/B/C...");
-                }
-            } else {
-                System.out.println("Vui long nhap 1 ky tu A/B/C...");
-                sc.next();
-            }
-        } while (input.length() != 1 || !((input.charAt(0) >= 'A' && input.charAt(0) <= 'Z') || (input.charAt(0) >= 'a' && input.charAt(0) <= 'z')));
+            input = sc.nextLine();
+            if (input.length() != 1 || !((input.charAt(0) >= 'a' && input.charAt(0) <= 'z') || (input.charAt(0) >= 'A' && input.charAt(0) <= 'Z'))) {
+                System.out.println("Vui long chi nhap 1 ky tu A/B/C...");
+            } 
+        } while (input.length() != 1 || !((input.charAt(0) >= 'a' && input.charAt(0) <= 'z') || (input.charAt(0) >= 'A' && input.charAt(0) <= 'Z')));
         
-        return input.charAt(0);
+        return svXepLoai = input.charAt(0);
     }
     
-    public static boolean inputsvTotNghiep(Scanner sc) {
-        boolean input;
-        
+    public static boolean inputSvTotNghiep(Scanner sc) {      
         do {
             System.out.print("Tot nghiep (true/false): ");
             if (sc.hasNextBoolean()) {
-                input = sc.nextBoolean();
+                svTotNghiep = sc.nextBoolean();
                 break;
             } else {
-                System.out.print("Vui long chi nhap true hoac false. \n");
+                System.out.println("Vui nhap chi nhap true hoac false.");
                 sc.next();
             }
         } while (true);
-    
-        return input;
+        
+        return svTotNghiep;
     }
     
-    public static String convertsvTotNghieptoString(boolean svTotNghiep) {
+    public static String convertSvTotNghieptoString(boolean svTotNghiep) {
         return svTotNghiep ? "Da xet" : "Chua xet";
     }
-
+    
+    public static void menuHandMade() {
+        // Tao MENU HandMade
+        while (true) {
+            System.out.println("\n1. Ho ten");
+            System.out.println("2. Tuoi");
+            System.out.println("3. Diem");
+            System.out.println("4. Xep loai");
+            System.out.println("5. Tot nghiep");
+            System.out.println("0. Thoat");
+            System.out.print("\n>>  Chon: ");
+            
+            if (!sc.hasNextInt()) {
+                System.out.println("Lua chon khong hop le.");
+                sc.next();
+                continue;
+            }
+            
+            int c = sc.nextInt();
+            
+            switch (c) {
+                case 1 -> {
+                    System.out.printf("Ho ten: %s\n", svHoTen);
+                }
+                
+                case 2 -> {
+                    System.out.printf("Tuoi: %d\n", svTuoi);
+                }
+                
+                case 3 -> {
+                    System.out.printf("Diem TB: %.2f\n", svDiem);
+                }
+                
+                case 4 -> {
+                    System.out.printf("Xep loai: %c\n", svXepLoai);
+                }
+                
+                case 5 -> {
+                    System.out.printf("Tot nghiep: %s\n", convertSvTotNghieptoString(svTotNghiep));
+                }
+                
+                case 0 -> {
+                    System.out.println("Tam biet!");
+                    sc.close();
+                    return;
+                }
+                
+                default -> System.out.println("Lua chon khong hop le.");
+            }
+        }
+    }
+    
+    public static void printSv() {
+        System.out.printf("Ho ten: %s\n", svHoTen);
+        System.out.printf("Tuoi: %d\n", svTuoi);
+        System.out.printf("Diem TB: %.2f\n", svDiem);
+        System.out.printf("Xep loai: %c\n", svXepLoai);
+        System.out.printf("Tot nghiep: %s\n", convertSvTotNghieptoString(svTotNghiep));
+    }
+    
     public static void main(String[] args) {
-
-        
-        Scanner sc = new Scanner(System.in);
-        
         // Nhap thong tin sinh vien
-        svHoTen = inputsvHoTen(sc);
-        svTuoi = inputsvTuoi(sc);
-        svDiem = inputsvDiem(sc);
-        svXepLoai = inputsvXepLoai(sc);
-        svTotNghiep = inputsvTotNghiep(sc);
+        svHoTen = inputSvHoTen(sc);
+        svTuoi = inputSvTuoi(sc);
+        svDiem = inputSvDiem(sc);
+        svXepLoai = inputSvXepLoai(sc);
+        svTotNghiep = inputSvTotNghiep(sc);
         
-        // Xuat thong tin sinh vien
+        // Xuat thong tin sinh vien ra man hinh
         System.out.println("\n=== THONG TIN SINH VIEN ===");
-        System.out.println("Ho ten: " + svHoTen);
-        System.out.println("Tuoi: " + svTuoi);
-        System.out.println("Diem TB: " + svDiem);
-        System.out.println("Xep loai: " + svXepLoai);
-        System.out.println("Tot nghiep: " + convertsvTotNghieptoString(svTotNghiep));
+          
+        printSv();
+        
+        // Menu HandMade
+        menuHandMade();
         
         sc.close();
     }
