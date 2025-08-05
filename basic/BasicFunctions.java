@@ -80,7 +80,7 @@ public class BasicFunctions {
         return svTotNghiep;
     }
     
-    public static String convertSvTotNghieptoString(boolean svTotNghiep) {
+    public static String convertSvTotNghieptoString() {
         return svTotNghiep ? "Da xet" : "Chua xet";
     }
     
@@ -121,7 +121,7 @@ public class BasicFunctions {
                 }
                 
                 case 5 -> {
-                    System.out.printf("Tot nghiep: %s\n", convertSvTotNghieptoString(svTotNghiep));
+                    System.out.printf("Tot nghiep: %s\n", convertSvTotNghieptoString());
                 }
                 
                 case 0 -> {
@@ -140,7 +140,7 @@ public class BasicFunctions {
         System.out.printf("Tuoi: %d\n", svTuoi);
         System.out.printf("Diem TB: %.2f\n", svDiem);
         System.out.printf("Xep loai: %c\n", svXepLoai);
-        System.out.printf("Tot nghiep: %s\n", convertSvTotNghieptoString(svTotNghiep));
+        System.out.printf("Tot nghiep: %s\n", convertSvTotNghieptoString());
     }
     
     public static void main(String[] args) {
