@@ -83,7 +83,6 @@ public class ReBasic {
     public static void printSv(Scanner sc) {
         String input = inputSvTotNghiep(sc);
         
-        System.out.println("\n=== THONG TIN SINH VIEN ===");
         System.out.printf("Ho ten: %s\n", svHoTen);
         System.out.printf("Tuoi: %d\n", svTuoi);
         System.out.printf("Diem TB: %.2f\n", svDiem);
@@ -97,8 +96,58 @@ public class ReBasic {
         svTuoi = inputSvTuoi(sc);
         svDiem = inputSvDiem(sc);
         svXepLoai = inputSvXepLoai(sc);
+        String input = inputSvTotNghiep(sc);
         
         // Xuat thong tin sinh vien ra man hinh
-        printSv(sc);
+        System.out.println("\n=== THONG TIN SINH VIEN ===");
+        
+        // Tao MENU HandMade
+        while (true) {
+            System.out.println("\n1. Ho ten");
+            System.out.println("2. Tuoi");
+            System.out.println("3. Diem");
+            System.out.println("4. Xep loai");
+            System.out.println("5. Tot nghiep");
+            System.out.println("0. Thoat");
+            System.out.print("\n>>  Chon: ");
+            
+            if (!sc.hasNextInt()) {
+                System.out.println("Lua chon khong hop le.");
+                sc.next();
+                continue;
+            }
+            
+            int c = sc.nextInt();
+            
+            switch (c) {
+                case 1 -> {
+                    System.out.printf("Ho ten: %s\n", svHoTen);
+                }
+                
+                case 2 -> {
+                    System.out.printf("Tuoi: %d\n", svTuoi);
+                }
+                
+                case 3 -> {
+                    System.out.printf("Diem TB: %.2f\n", svDiem);
+                }
+                
+                case 4 -> {
+                    System.out.printf("Xep loai: %c\n", svXepLoai);
+                }
+                
+                case 5 -> {
+                    System.out.printf("Tot nghiep: %s\n", input);
+                }
+                
+                case 0 -> {
+                    System.out.println("Tam biet!");
+                    sc.close();
+                    return;
+                }
+                
+                default -> System.out.println("Lua chon khong hop le.");
+            }
+        }
     }
 }
