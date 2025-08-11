@@ -17,7 +17,7 @@ Gồm **6 file**:
 
 ```bash
 # Biên dịch
-javac -d out $(find src/main/java -name "*.java")
+javac -d out $(find . -name "*.java")
 
 # Chạy
 java -cp out oop.app.Main
