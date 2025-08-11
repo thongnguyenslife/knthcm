@@ -1,4 +1,4 @@
-# Học Phần Kỹ Năng Thực Hành Chuyên Môn CNTT – Đại Học Tôn Đức Thắng
+# Học Phần Kỹ Năng Thực Hành Chuyên Môn Công Nghệ Thông Tin Đại Học Tôn Đức Thắng
 
 ![Java](https://img.shields.io/badge/Java-Programming-blue)
 ![JDK](https://img.shields.io/badge/Requires-JDK%2011%2B-informational)
