@@ -67,4 +67,4 @@ java -cp out oop.app.Main
 
 ---
 
-> Gợi ý: thêm test dữ liệu trong `Seed demo` để nhanh chóng kiểm tra chức năng sắp xếp/tìm kiếm/cập nhật/xóa.
+> Gợi ý: Thêm test dữ liệu trong `Seed demo` để nhanh chóng kiểm tra chức năng sắp xếp/tìm kiếm/cập nhật/xóa.
