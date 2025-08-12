@@ -9,6 +9,16 @@
 
 ---
 
+### Mô Tả Đề Thi
+
+- **Hình thức thi**: Thực hành trên máy – Cisco Packet Tracer hoặc GNS3  
+- **Thời gian làm bài**: 180 phút.  
+- **Cấu trúc bài thi**:
+  1. Lập trình cơ bản (20%)  
+  2. Lập trình hướng đối tượng (15%)  
+  3. Mô phỏng mạng + cấu hình thiết bị (35%)  
+  4. Sửa lỗi hệ thống mạng (30%)
+
 ## 📦 Cấu trúc thư mục chính
 
 ```text
@@ -27,6 +37,7 @@ knthcm/
 - Terminal (Bash trên Linux/macOS, PowerShell/CMD trên Windows).
 
 Kiểm tra cài đặt:
+
 ```bash
 java -version
 javac -version
@@ -37,12 +48,14 @@ javac -version
 ## ▶️ Cách biên dịch và chạy nhanh (tại thư mục `knthcm/`)
 
 ### Linux / macOS (Bash)
+
 ```bash
 cd knthcm
 javac $(find . -name "*.java")
 ```
 
 ### Windows PowerShell
+
 ```powershell
 cd knthcm
 $files = Get-ChildItem -Recurse -Filter *.java | ForEach-Object { $_.FullName }
