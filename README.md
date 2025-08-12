@@ -21,6 +21,7 @@
 ├─ Mô phỏng mạng + cấu hình thiết bị (35%).
 └─ Sửa lỗi hệ thống mạng (30%).
 ```
+
 ---
 
 ## 📦 Cấu trúc thư mục chính
