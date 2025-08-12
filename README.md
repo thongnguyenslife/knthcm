@@ -14,19 +14,23 @@
 - **Hình thức thi**: Thực hành trên máy – Cisco Packet Tracer hoặc GNS3  
 - **Thời gian làm bài**: 180 phút.  
 - **Cấu trúc bài thi**:
-  Lập trình cơ bản (20%)  
-  Lập trình hướng đối tượng (15%)  
-  Mô phỏng mạng + cấu hình thiết bị (35%)  
-  Sửa lỗi hệ thống mạng (30%)
+
+```text
+├─ Lập trình cơ bản (20%).  
+├─ Lập trình hướng đối tượng (15%).  
+├─ Mô phỏng mạng + cấu hình thiết bị (35%).
+└─ Sửa lỗi hệ thống mạng (30%).
+```
+---
 
 ## 📦 Cấu trúc thư mục chính
 
 ```text
 knthcm/
-├─ basic/               # Bài tập Java cơ bản (strings, arrays, functions,...)
-├─ oop/                 # Bài tập Java OOP đầy đủ (Person, Student, Repository,...)
-├─ network/             # Bài tập cơ bản về mạng Cisco Packet Tracer
-└─ troubleshoot/        # Ghi chú xử lý lỗi / mẹo vặt Cisco Packet Tracer
+├─ basic/               # Bài tập Java cơ bản (strings, arrays, functions,...).
+├─ oop/                 # Bài tập Java OOP đầy đủ (Person, Student, Repository,...).
+├─ network/             # Bài tập cơ bản về mạng Cisco Packet Tracer.
+└─ troubleshoot/        # Ghi chú xử lý lỗi / mẹo vặt Cisco Packet Tracer.
 ```
 
 ---
