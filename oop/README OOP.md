@@ -13,14 +13,12 @@ Gồm **6 file**:
 
 ## 🚀 Chạy nhanh
 
-> Mặc định theo cấu trúc Maven-like `src/main/java`. Nếu bạn đang ở cấu trúc khác, xem thêm phần **Ghi chú** bên dưới.
-
 ```bash
 # Biên dịch
 javac -d out $(find . -name "*.java")
 
 # Chạy
-java -cp out oop.app.Main
+java -cp out app.Main
 ```
 
 **Windows PowerShell**:

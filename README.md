@@ -5,7 +5,7 @@
 ![Build](https://img.shields.io/badge/Build-javac%20%7C%20CLI-success)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-> Bộ bài tập / demo thực hành Java (cú pháp cơ bản, xử lý chuỗi/mảng, OOP), mạng, và troubleshoot Cisco Packet Tracer.
+> Bộ bài tập và demo thực hành bao gồm Java (cú pháp cơ bản, xử lý chuỗi và mảng, lập trình hướng đối tượng), cùng với các nội dung về mạng và xử lý sự cố bằng Cisco Packet Tracer.
 
 ---
 
