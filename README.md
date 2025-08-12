@@ -9,7 +9,7 @@
 
 ---
 
-### 🕸 Mô Tả Đề Thi
+### 🖧 Mô Tả Đề Thi
 
 - **Hình thức thi**: Thực hành trên máy – Cisco Packet Tracer hoặc GNS3  
 - **Thời gian làm bài**: 180 phút.  
