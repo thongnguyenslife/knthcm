@@ -80,7 +80,7 @@ javac $files
 
 ## 📜 License
 
-Phát hành theo giấy phép MIT. Xem file `LICENSE` (nếu có) hoặc thêm sau.
+Phát hành theo giấy phép **MIT** — xem [LICENSE](./LICENSE).
 
 ---
 
